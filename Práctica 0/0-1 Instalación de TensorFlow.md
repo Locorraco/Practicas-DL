@@ -21,3 +21,18 @@ O bien, si cuentas con una tarjeta de video dedicada o GPU, instala la versión 
 conda create -n nombre_del_ambiente tensorflow-gpu
 conda activate nombre_del_ambiente
 ```
+
+Una vez dentro del ambiente, es necesario instalar las siguientes librerías
+```bash
+conda install -c conda-forge jupyterlab #Es el enviroment para notebooks para poder trabajar
+conda install -c conda-forge matplotlib #Librería para trabajar con datos y estadísticas
+conda install -c conda-forge opencv	#Librería de visión artificial 
+conda install -c conda-forge keras	#Librería de Redes Neuronales que se ejecuta sobre TensorFlow
+conda install -c conda-forge spacy	#Librería para el análisis de lenguaje
+conda install -c conda-forge tqdm	#Barra de progreso para visualizar el entrenamiento de las redes
+conda install -c anaconda seaborn	#Librería para el manejo de gráficas y análisis de datos
+conda install -c anaconda pandas	#Librería para el manejo y análisis de estructuras de datos
+conda install -c anaconda numpy		#Librería para crear vectores y matrices multidimencionaes
+conda install -c scikit-learn		#Librería para el análisis de datos predictivo
+python -m spacy download en		#Complemento de Spacy para el análisis del idioma Inglés
+```
