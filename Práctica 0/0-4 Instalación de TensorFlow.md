@@ -36,3 +36,24 @@ conda install -c anaconda numpy		#Librería para crear vectores y matrices multi
 conda install -c scikit-learn		#Librería para el análisis de datos predictivo
 python -m spacy download en		#Complemento de Spacy para el análisis del idioma Inglés
 ```
+
+Para corroborar las versiones y mantener todos los paquetes al día se debe de ejecutar el siguiente comando:
+
+```bash
+conda update --all
+```
+
+Para abrir Jupyter es necesario ejecutar el comando:
+
+```bash
+jupyter-lab
+```
+
+Abrirá el manejador de libretas (o notebooks). Para probar que todo funcione, crea un nuevo notebook y escribe:
+
+```bash
+import tensorflow as tf 
+print(tf.__version__)
+```
+
+Debería imprimir `2.6.0`. 
