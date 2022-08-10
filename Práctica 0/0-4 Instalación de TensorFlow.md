@@ -56,4 +56,4 @@ import tensorflow as tf
 print(tf.__version__)
 ```
 
-Debería imprimir `2.6.0`. 
+Debería imprimir `2.6.0`.
