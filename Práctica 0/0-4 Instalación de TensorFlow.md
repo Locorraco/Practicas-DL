@@ -12,29 +12,29 @@ TensorFlow es muy sencillo de instalar usando Anaconda. Es soportado en la versi
 
 3. Para instalar la versión actual de TensorFlow solo para CPU usa el siguiente comando
 ```bash
-conda create -n nombre_del_ambiente tensorflow
+conda create -n nombre_del_ambiente tensorflow python=3.9.12 ipython
 conda activate nombre_del_ambiente
 ```
 
 O bien, si cuentas con una tarjeta de video dedicada o GPU, instala la versión actual de TensorFlow GPU para Windows o Linux
 ```bash
-conda create -n nombre_del_ambiente tensorflow-gpu
+conda create -n nombre_del_ambiente tensorflow-gpu python=3.9.12 ipython
 conda activate nombre_del_ambiente
 ```
 
 Una vez dentro del ambiente, es necesario instalar las siguientes librerías
 ```bash
-conda install -c conda-forge jupyterlab #Es el enviroment para notebooks para poder trabajar
-conda install -c conda-forge matplotlib #Librería para trabajar con datos y estadísticas
-conda install -c conda-forge opencv	#Librería de visión artificial 
-conda install -c conda-forge keras	#Librería de Redes Neuronales que se ejecuta sobre TensorFlow
-conda install -c conda-forge spacy	#Librería para el análisis de lenguaje
-conda install -c conda-forge tqdm	#Barra de progreso para visualizar el entrenamiento de las redes
-conda install -c anaconda seaborn	#Librería para el manejo de gráficas y análisis de datos
-conda install -c anaconda pandas	#Librería para el manejo y análisis de estructuras de datos
-conda install -c anaconda numpy		#Librería para crear vectores y matrices multidimencionaes
-conda install -c scikit-learn		#Librería para el análisis de datos predictivo
-python -m spacy download en		#Complemento de Spacy para el análisis del idioma Inglés
+conda install -c conda-forge jupyterlab --yes #Es el enviroment para notebooks para poder trabajar
+conda install -c conda-forge matplotlib --yes #Librería para trabajar con datos y estadísticas
+conda install -c conda-forge opencv	--yes     #Librería de visión artificial 
+conda install -c conda-forge keras	--yes     #Librería de Redes Neuronales que se ejecuta sobre TensorFlow
+conda install -c conda-forge spacy	--yes     #Librería para el análisis de lenguaje
+conda install -c conda-forge tqdm	--yes       #Barra de progreso para visualizar el entrenamiento de las redes
+conda install -c anaconda scikit-learn --yes	#Librería para el análisis de datos predictivo
+conda install -c anaconda seaborn	--yes       #Librería para el manejo de gráficas y análisis de datos
+conda install -c anaconda pandas	--yes       #Librería para el manejo y análisis de estructuras de datos
+conda install -c anaconda numpy	--yes	        #Librería para crear vectores y matrices multidimencionaes
+python -m spacy download en --user		        #Complemento de Spacy para el análisis del idioma Inglés
 ```
 
 Para corroborar las versiones y mantener todos los paquetes al día se debe de ejecutar el siguiente comando:
