@@ -24,17 +24,17 @@ conda activate nombre_del_ambiente
 
 Una vez dentro del ambiente, es necesario instalar las siguientes librerías
 ```bash
-conda install -c conda-forge jupyterlab --yes #Es el enviroment para notebooks para poder trabajar
-conda install -c conda-forge matplotlib --yes #Librería para trabajar con datos y estadísticas
-conda install -c conda-forge opencv	--yes     #Librería de visión artificial 
-conda install -c conda-forge keras	--yes     #Librería de Redes Neuronales que se ejecuta sobre TensorFlow
-conda install -c conda-forge spacy	--yes     #Librería para el análisis de lenguaje
-conda install -c conda-forge tqdm	--yes       #Barra de progreso para visualizar el entrenamiento de las redes
+conda install -c conda-forge jupyterlab --yes 	#Es el enviroment para notebooks para poder trabajar
+conda install -c conda-forge matplotlib --yes 	#Librería para trabajar con datos y estadísticas
+conda install -c conda-forge opencv --yes	#Librería de visión artificial 
+conda install -c conda-forge keras --yes	#Librería de Redes Neuronales que se ejecuta sobre TensorFlow
+conda install -c conda-forge spacy --yes	#Librería para el análisis de lenguaje
+conda install -c conda-forge tqdm --yes		#Barra de progreso para visualizar el entrenamiento de las redes
 conda install -c anaconda scikit-learn --yes	#Librería para el análisis de datos predictivo
-conda install -c anaconda seaborn	--yes       #Librería para el manejo de gráficas y análisis de datos
-conda install -c anaconda pandas	--yes       #Librería para el manejo y análisis de estructuras de datos
-conda install -c anaconda numpy	--yes	        #Librería para crear vectores y matrices multidimencionaes
-python -m spacy download en --user		        #Complemento de Spacy para el análisis del idioma Inglés
+conda install -c anaconda seaborn --yes		#Librería para el manejo de gráficas y análisis de datos
+conda install -c anaconda pandas --yes		#Librería para el manejo y análisis de estructuras de datos
+conda install -c anaconda numpy	--yes		#Librería para crear vectores y matrices multidimencionaes
+python -m spacy download en --user		#Complemento de Spacy para el análisis del idioma Inglés
 ```
 
 Para corroborar las versiones y mantener todos los paquetes al día se debe de ejecutar el siguiente comando:
