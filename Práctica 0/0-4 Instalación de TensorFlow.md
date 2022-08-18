@@ -36,6 +36,9 @@ conda install -c anaconda pandas --yes		#Librería para el manejo y análisis de
 conda install -c anaconda numpy	--yes		#Librería para crear vectores y matrices multidimencionaes
 python -m spacy download en --user		#Complemento de Spacy para el análisis del idioma Inglés
 pip install split-folders  			#Librería para separar folders con archivos en train, test y validation
+conda install h5py				#librería para exportar archivos h5py
+conda install git				#Librería para poder usar Git
+pip install git+https://github.com/qubvel/segmentation_models 	#Librería para utilizar modelos de segmentación
 ```
 
 Para corroborar las versiones y mantener todos los paquetes al día se debe de ejecutar el siguiente comando:
