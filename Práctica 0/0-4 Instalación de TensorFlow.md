@@ -35,6 +35,7 @@ conda install -c anaconda seaborn --yes		#Librería para el manejo de gráficas 
 conda install -c anaconda pandas --yes		#Librería para el manejo y análisis de estructuras de datos
 conda install -c anaconda numpy	--yes		#Librería para crear vectores y matrices multidimencionaes
 python -m spacy download en --user		#Complemento de Spacy para el análisis del idioma Inglés
+pip install split-folders  			#Librería para separar folders con archivos en train, test y validation
 ```
 
 Para corroborar las versiones y mantener todos los paquetes al día se debe de ejecutar el siguiente comando:
