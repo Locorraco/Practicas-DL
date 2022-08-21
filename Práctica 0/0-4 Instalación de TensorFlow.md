@@ -10,35 +10,52 @@ TensorFlow es muy sencillo de instalar usando Anaconda. Es soportado en la versi
 
 2. Elija el nombre de su entorno de TensorFlow. Se recomienda un nombre sencillo y fácil de recordar para facilitar el acceso constante que se tendra al entorno/ambiente.
 
-3. Para instalar la versión actual de TensorFlow solo para CPU usa el siguiente comando
+3. Para instalar la versión actual de TensorFlow solo para:
+
+### a.- GPU
+
 ```bash
-conda create -n nombre_del_ambiente tensorflow python=3.9.12 ipython
+conda create -n nombre_del_ambiente python=3.9.12 ipython
 conda activate nombre_del_ambiente
+conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
+pip install --upgrade pip
+pip install tensorflow
 ```
 
-O bien, si cuentas con una tarjeta de video dedicada o GPU, instala la versión actual de TensorFlow GPU para Windows o Linux
+Y prueba la instalación ejecutando
+
 ```bash
-conda create -n nombre_del_ambiente tensorflow-gpu python=3.9.12 ipython
+ipython -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
+```
+Si regresa una lista de dispositivos GPU, la instalación a sido exitosa. 
+
+### b.- CPU
+```bash
+conda create -n nombre_del_ambiente python=3.9.12 ipython
 conda activate nombre_del_ambiente
+pip install --upgrade pip
+pip install tensorflow-cpu
 ```
 
-Una vez dentro del ambiente, es necesario instalar las siguientes librerías
+Y prueba la instalación ejecutando
+
 ```bash
-conda install -c conda-forge jupyterlab --yes 	#Es el enviroment para notebooks para poder trabajar
-conda install -c conda-forge matplotlib --yes 	#Librería para trabajar con datos y estadísticas
-conda install -c conda-forge opencv --yes	#Librería de visión artificial 
-conda install -c conda-forge keras --yes	#Librería de Redes Neuronales que se ejecuta sobre TensorFlow
-conda install -c conda-forge spacy --yes	#Librería para el análisis de lenguaje
-conda install -c conda-forge tqdm --yes		#Barra de progreso para visualizar el entrenamiento de las redes
-conda install -c anaconda scikit-learn --yes	#Librería para el análisis de datos predictivo
-conda install -c anaconda seaborn --yes		#Librería para el manejo de gráficas y análisis de datos
-conda install -c anaconda pandas --yes		#Librería para el manejo y análisis de estructuras de datos
-conda install -c anaconda numpy	--yes		#Librería para crear vectores y matrices multidimencionaes
-python -m spacy download en --user		#Complemento de Spacy para el análisis del idioma Inglés
-pip install split-folders  			#Librería para separar folders con archivos en train, test y validation
-conda install h5py				#librería para exportar archivos h5py
-conda install git				#Librería para poder usar Git
-pip install git+https://github.com/qubvel/segmentation_models 	#Librería para utilizar modelos de segmentación
+ipython -c "import tensorflow as tf; print(tf.reduce_sum(tf.random.normal([1000, 1000])))"
+```
+Si regresa un tensor, la instalación a sido exitosa. 
+
+4. Una vez dentro del ambiente, es necesario instalar las siguientes librerías
+```bash
+pip install -U scikit-learn --yes	#Librería para el análisis de datos predictivo
+pip install split-folders --yes		#Librería para separar folders con archivos en train, test y validation
+pip install -U matplotlib --yes		#Librería para trabajar con datos y estadísticas
+pip install opencv-python --yes		#Librería de visión artificial
+pip install jupyterlab --yes		#Es el enviroment para notebooks para poder trabajar 
+pip install seaborn --yes		#Librería para el manejo de gráficas y análisis de datos
+pip install pandas --yes		#Librería para el manejo y análisis de estructuras de datos
+pip install scipy --yes			#Librería para el análisis de lenguaje
+python -m spacy download en --user	#Complemento de Spacy para el análisis del idioma Inglés
+pip install tqdm --yes			#Barra de progreso para visualizar el entrenamiento de las redes
 ```
 
 Para corroborar las versiones y mantener todos los paquetes al día se debe de ejecutar el siguiente comando:
@@ -60,4 +77,4 @@ import tensorflow as tf
 print(tf.__version__)
 ```
 
-Debería imprimir `2.6.0`.
+Debería imprimir `2.9.2` o una versión superior.
