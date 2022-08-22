@@ -46,16 +46,16 @@ Si regresa un tensor, la instalación a sido exitosa.
 
 4. Una vez dentro del ambiente, es necesario instalar las siguientes librerías
 ```bash
-pip install -U scikit-learn --yes	#Librería para el análisis de datos predictivo
-pip install split-folders --yes		#Librería para separar folders con archivos en train, test y validation
-pip install -U matplotlib --yes		#Librería para trabajar con datos y estadísticas
-pip install opencv-python --yes		#Librería de visión artificial
-pip install jupyterlab --yes		#Es el enviroment para notebooks para poder trabajar 
-pip install seaborn --yes		#Librería para el manejo de gráficas y análisis de datos
-pip install pandas --yes		#Librería para el manejo y análisis de estructuras de datos
-pip install scipy --yes			#Librería para el análisis de lenguaje
+pip install -U scikit-learn		#Librería para el análisis de datos predictivo
+pip install -U matplotlib		#Librería para trabajar con datos y estadísticas
+pip install split-folders		#Librería para separar folders con archivos en train, test y validation
+pip install opencv-python		#Librería de visión artificial
+pip install jupyterlab			#Es el enviroment para notebooks para poder trabajar 
+pip install seaborn			#Librería para el manejo de gráficas y análisis de datos
+pip install pandas			#Librería para el manejo y análisis de estructuras de datos
+pip install scipy			#Librería para el análisis de lenguaje
 python -m spacy download en --user	#Complemento de Spacy para el análisis del idioma Inglés
-pip install tqdm --yes			#Barra de progreso para visualizar el entrenamiento de las redes
+pip install tqdm			#Barra de progreso para visualizar el entrenamiento de las redes
 ```
 
 Para corroborar las versiones y mantener todos los paquetes al día se debe de ejecutar el siguiente comando:
